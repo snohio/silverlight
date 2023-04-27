@@ -1,16 +1,10 @@
-#
-# Cookbook:: silverlight
-# Spec:: default
-#
-# Copyright:: 2023, The Authors, All Rights Reserved.
-
 require 'spec_helper'
 
-describe 'silverlight::default' do
+describe 'hrb_vuln_cb::default' do
   context 'When the "silverlight_exception" tag is present, on Windows 2016' do
     let(:chef_run) do
       runner = ChefSpec::SoloRunner.new(platform: 'windows', version: '2016')
-      runner.node.normal['tags'] = ['silverlight_exception']
+      runner.node.normal['tags'] = ['silverlight_exception'] # this also does not work
       runner.converge(described_recipe)
     end
 
