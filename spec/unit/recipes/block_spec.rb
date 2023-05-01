@@ -4,7 +4,7 @@ describe 'hrb_vuln_cb::default' do
   context 'When the "silverlight_exception" tag is present, on Windows 2016' do
     let(:chef_run) do
       runner = ChefSpec::SoloRunner.new(platform: 'windows', version: '2016')
-      runner.node.normal['tags'] = ['silverlight_exception'] # this also does not work
+      runner.node.normal['tags'] = ['silverlight_exception'] # rubocop:disable Chef/Correctness/NodeNormal
       runner.converge(described_recipe)
     end
 

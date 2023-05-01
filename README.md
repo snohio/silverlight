@@ -1,4 +1,3 @@
-# silverlight
+# Silverlight Cookbook
 
-TODO: Enter the cookbook description here.
-
+This coookbook is a quick thing to play with injecting a normal attribute into the ChefSpec test for HRBlock.
